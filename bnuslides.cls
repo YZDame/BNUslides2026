@@ -26,6 +26,7 @@
 \RequirePackage{subcaption}
 
 \RequirePackage{natbib}
+\RequirePackage{appendixnumberbeamer}
 
 \useoutertheme[width=5\baselineskip,right]{sidebar}
 % delete title and author
@@ -100,10 +101,38 @@
 \setbeamercolor{bibliography entry journal}{fg=BUNBlueLight}
 \setbeamercolor{bibliography entry note}{fg=BUNBlueLighter}
 
-% 使用 \appendix 后，附录章节不在侧边栏高亮
-% 参考文献特殊处理
-\AtBeginAppendix{
-	\addtocounter{secnumdepth}{-1}
-	\section*{参考文献}
-	\addcontentsline{toc}{section}{参考文献}
+% ============================================================
+% 参考文献附录支持
+% 使用方法（在 main.tex 中）：
+%   1. 在主文档末尾使用 \appendix
+%   2. 然后使用 \begin{frame}[allowframebreaks]{参考文献}
+%   3. 在帧内使用 \bibliographystyle{xxx} 和 \bibliography{xxx}
+% ============================================================
+
+% 使用 \appendixnumberbeamer 包后，\appendix 后的页面不会被计入总数
+% 参考文献帧的特殊处理
+% 不使用 \section 命令，直接用 frame 来避免 sidebar 显示
+
+% 参考文献条目样式
+\defbeamertemplate*{bibliography item}{bnuslides}{
+	\insertbiblabelitem{\color{BUNBlue}\insertbiblabel}
+}
+
+% 自定义环境：参考文献附录（不出现在 sidebar）
+% 使用方法：\begin{referencesframe} ... \end{referencesframe}
+\newenvironment{referencesframe}
+{
+	\begin{frame}[allowframebreaks,plain]{参考文献}
+}
+{
+	\bibliographystyle{plain}
+	\bibliography{refs}
+	\end{frame}
+}
+
+% 自定义命令：参考文献章节标题（不出现在 sidebar）
+% 用法：\referencesection
+\newcommand{\referencesection}{
+	% 使用 \pdfbookmark 创建 PDF 书签（可选）
+	\pdfbookmark[0]{参考文献}{references}%
 }

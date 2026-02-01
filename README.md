@@ -16,8 +16,10 @@
 
 ### 编译方式与发布地址
 
-编译请使用`xelatex*2`，否则目录无法正常显示
+编译请使用`xelatex->bibtex->xelatex->xelatex`，否则目录和引用无法正常显示
 
-[Overleaf](https://www.overleaf.com/latex/templates/bnuslides/txrjnsqpqqkh)：开箱即用，但后期不一定会更新
+[Overleaf](https://www.overleaf.com/latex/templates/bnuslides/txrjnsqpqqkh)：已停止更新
 
-[Github](https://github.com/LeyuDame/BNUslides)：不定期更新
+[Github](https://github.com/LeyuDame/BNUslides)：2026-02-01 更新
+
+> **注意**：实际上好好准备答辩就行了，模板只是锦上添花而已，不要把时间浪费在折腾模板上

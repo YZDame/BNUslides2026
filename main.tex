@@ -1,9 +1,9 @@
 % Author: LeyuDame
-% Date: 2024-04-20
-% Github: https://github.com/LeyuDame/BNUslides
-% Overleaf: 
+% Date: 2026-02-01
+% Github: https://github.com/YZDame/BNUslides2026
+% Overleaf: 使用的是2024的旧版, 不再更新
 
-% !TeX program = xelatex*2
+% !TeX program = xelatex->bibtex->xelatex->xelatex
 \documentclass{bnuslides}
 \begin{document}
 \frame[plain]{\titlepage}
@@ -123,17 +123,18 @@
 		\begin{equation}
 			\mathbb{E}[\mathrm{e}^{\lambda x}]= \exp{\{\mu \lambda + \frac{\lambda^2\sigma^2}{2}\}}
 		\end{equation}
-		由Chernoff ineq., 有
+		由Chernoff ineq\cite{einstein1905}\cite{knuth1984}., 有
 		\begin{equation}
 			\mathbb{P}(x-\mu \geqslant t) \leqslant \mathrm{e}^{-\frac{t^2}{2\sigma^2}}
 			\label{高斯随机变量的尾分布}
 		\end{equation}
 	\end{example}
 	\begin{alertblock}{注}
-		其中\eqref{高斯随机变量的尾分布}式在一个多项式因子的修正后是sharp的.
+		其中\eqref{高斯随机变量的尾分布}式在一个多项式因子的修正后是sharp的\cite{lamport1994}.
 	\end{alertblock}
 \end{frame}
 
+\appendix
 \section{致谢}
 \begin{frame}
 	\Huge
@@ -142,7 +143,6 @@
 	$$
 \end{frame}
 
-\appendix
 % 参考文献附录（使用 \appendixnumberbeamer 后不会计入总页数）
 \begin{frame}[allowframebreaks]{参考文献}
 	\bibliographystyle{plain}

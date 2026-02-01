@@ -25,7 +25,7 @@
 \RequirePackage{multicol}
 \RequirePackage{subcaption}
 
-\RequirePackage{natbib}
+\RequirePackage[numbers]{natbib}
 \RequirePackage{appendixnumberbeamer}
 
 \useoutertheme[width=5\baselineskip,right]{sidebar}

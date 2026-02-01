@@ -93,3 +93,17 @@
 \institute[北京师范大学]{北京师范大学}
 \date[\today]{\today}
 \titlegraphic{\includegraphics[width=2cm]{bnu_icon.pdf}}
+
+% 参考文献样式
+\setbeamercolor{bibliography entry author}{fg=BUNBlue}
+\setbeamercolor{bibliography entry title}{fg=BUNBlueDark}
+\setbeamercolor{bibliography entry journal}{fg=BUNBlueLight}
+\setbeamercolor{bibliography entry note}{fg=BUNBlueLighter}
+
+% 使用 \appendix 后，附录章节不在侧边栏高亮
+% 参考文献特殊处理
+\AtBeginAppendix{
+	\addtocounter{secnumdepth}{-1}
+	\section*{参考文献}
+	\addcontentsline{toc}{section}{参考文献}
+}

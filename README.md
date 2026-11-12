@@ -1,3 +1,6 @@
+> **本仓库已停止维护，模板已迁移到 [YZDame/BNU-LaTeX-Templates](https://github.com/YZDame/BNU-LaTeX-Templates)。** 下载最新版请见 [v0.1.0 Release](https://github.com/YZDame/BNU-LaTeX-Templates/releases/tag/v0.1.0)，预览见 [项目主页](https://yzdame.github.io/BNU-LaTeX-Templates/)。
+> This repository is archived; the templates now live at [YZDame/BNU-LaTeX-Templates](https://github.com/YZDame/BNU-LaTeX-Templates).
+
 ## BNUslides：一份简洁的师大蓝主题Beamer
 
 <img src="https://pauline.oss-cn-shenzhen.aliyuncs.com/img/202404201820201.webp" style="zoom:50%;" />
